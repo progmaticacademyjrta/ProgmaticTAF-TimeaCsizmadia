@@ -12,4 +12,13 @@ public class HomePageTests extends DriverBaseTest {
         homePage = new HomePage(driver, wait);
         homePage.loadHomePage();
     }
+
+    @Test(description="TC02: Appointment button works")
+
+    public void makeAppointmentClickToNewUrl(){
+        homePage=new HomePage(driver,wait);
+        homePage.makeAppointmentClick();
+    }
+
+
 }

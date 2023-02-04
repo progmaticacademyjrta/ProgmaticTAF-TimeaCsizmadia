@@ -11,6 +11,8 @@ public class HomePage {
     WebDriverWait wait;
     By headerBy = By.id("top");
 
+    By makeAppointment = By.id("btn-make-appointment");
+
     public HomePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
@@ -22,4 +24,12 @@ public class HomePage {
         Assert.assertTrue(headerElement.isDisplayed());
         System.out.println("Homepage loaded properly.");
     }
+
+    public void makeAppointmentClick() {
+        loadHomePage();
+        WebElement makeAppointmentButton = driver.findElement(makeAppointment);
+        makeAppointmentButton.click();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/profile.php#login");
+    }
+
 }
