@@ -44,7 +44,6 @@ public class AppointmentPage {
         WebElement bookButton = driver.findElement(bookButtonElement);
         bookButton.click();
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/appointment.php#summary");
-
     }
 }
 

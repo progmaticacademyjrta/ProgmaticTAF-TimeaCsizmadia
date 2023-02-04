@@ -19,5 +19,4 @@ public class LoginPageTests extends DriverBaseTest {
         loginPage = new LoginPage(driver, wait);
         loginPage.wrongUserValidPassword();
     }
-
 }
