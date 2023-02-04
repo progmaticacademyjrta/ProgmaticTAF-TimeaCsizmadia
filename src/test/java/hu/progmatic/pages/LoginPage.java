@@ -40,7 +40,8 @@ public class LoginPage {
         passwordInput.sendKeys("ThisIsNotAPassword");
         WebElement loginButton = driver.findElement(loginButtonElement);
         loginButton.click();
-        //WebElement failedLoginMessage = driver.findElement(By.className("lead text-danger"));
+        WebElement failedLoginMessage = driver.findElement(By.cssSelector("p[class='lead text-danger']"));
+        failedLoginMessage.isDisplayed();
 
     }
 }
